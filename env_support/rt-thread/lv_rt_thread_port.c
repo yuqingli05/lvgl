@@ -106,7 +106,7 @@ static int lvgl_thread_init(void)
 
     rt_completion_init(&lvcompletion);
 
-    lvm = rt_mutex_create("lv_mutex", RT_IPC_FLAG_FIFO);
+    lvm = rt_mutex_create("lv_mtx", RT_IPC_FLAG_PRIO);
     RT_ASSERT(lvm != NULL);
 
     err = rt_thread_init(&lvgl_thread, "LVGL", lvgl_thread_entry, RT_NULL,
