@@ -121,6 +121,9 @@ static int lvgl_thread_init(void)
     IsEnLvgl = 1;
     return 0;
 }
+
+#if defined BSP_USING_LCD
 INIT_ENV_EXPORT(lvgl_thread_init);
+#endif /*__RTTHREAD__*/
 
 #endif /*__RTTHREAD__*/
