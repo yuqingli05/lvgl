@@ -14,6 +14,7 @@
 #include <lvgl.h>
 #include <rtthread.h>
 #include <rtdevice.h>
+#include <keyconfig.h>
 
 #define DBG_TAG "LVGL"
 #define DBG_LVL DBG_INFO
